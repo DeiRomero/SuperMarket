@@ -1,6 +1,6 @@
 ﻿namespace SuperMarket
 {
-    internal class FixedPriceProduct : Product
+    public class FixedPriceProduct : Product
     {
         public override decimal GetValeuToPay()
         {
