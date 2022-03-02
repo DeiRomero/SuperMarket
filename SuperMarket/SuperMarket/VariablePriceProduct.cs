@@ -17,7 +17,7 @@
         {
             return $"  {Id}  {$"{Description}",6}" +
                    $"\n\tMeasurement.:{$"{Measurement}",5}" +
-                   $"\n\tQuanti......:{$"{Quantity:N2}",14}" +
+                   $"\n\tQuantity....:{$"{Quantity:N2}",14}" +
                    $"\n\tPrice.......:{$"{Price:C2}",14}" +
                    $"\n\tTax.........:{$"{Tax:P2}",16}" +
                    $"\n\tValue.......:{$"{GetValeuToPay():C2}",14}";
