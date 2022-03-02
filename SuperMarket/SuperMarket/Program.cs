@@ -65,3 +65,5 @@ Console.WriteLine(product3);
 Console.WriteLine(product4);
 Console.WriteLine(product5);
 
+Console.WriteLine("-------------------------------------------------");
+
