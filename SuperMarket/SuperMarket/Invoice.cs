@@ -8,23 +8,37 @@ namespace SuperMarket
 {
     public class Invoice : IPay
     {
-        public int Id { get; set; }
-        public string Description { get; set; }
-        public float Quantity { get; set; }
-        public decimal Price { get; set; }
+        private List<Product> _products = new List<Product>();
 
+        public void AddProduct(Product product)
+        {
+            _products.Add(product);
+        }
         public decimal GetValeuToPay()
         {
-            return Price * (decimal)Quantity;
+            decimal Sum = 0;
+
+            foreach (Product product in _products) {
+            
+                Sum += product.GetValeuToPay();
+            
+            };
+           return Sum;
             
         }
 
         public override string ToString()
+
         {
-            return $"  {Id}  {$"{Description}",9}" +
-                    $"\n\tQuantity....: {$"{Quantity:N2}",9}" +
-                    $"\n\tPrice....:{$"{Price:C2}",16}" +
-                    $"\n\tValue.......:{$"{GetValeuToPay():C2}",14}";
+            
+            foreach (Product product in _products)
+            {
+
+                Console.WriteLine(product.ToString());
+
+            };
+            return $"                     ==============" +
+            $"\n TOTAL:    {$"{GetValeuToPay():C2}",23}";
         }
 
         
