@@ -67,3 +67,7 @@ Console.WriteLine(product5);
 
 Console.WriteLine("-------------------------------------------------");
 
+Invoice invoice = new Invoice();
+
+
+
