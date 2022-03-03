@@ -30,7 +30,9 @@ namespace SuperMarket
         public override string ToString()
 
         {
-            
+            Console.WriteLine("RECEIPT " +
+                              "\n--------------------------------------------------");
+
             foreach (Product product in _products)
             {
 
